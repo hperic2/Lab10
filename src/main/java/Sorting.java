@@ -32,8 +32,20 @@ public class Sorting {
      */
     @SuppressWarnings("unused")
     private static int[] bubbleSort(final int[] array) {
-        return null;
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < array[i - 1]) {
+                int temp = array[i];
+                array[i] = array[i - 1];
+                array[i - 1] = temp;
+                return bubbleSort(array);
+
+            }
+        }
+        return array;
     }
+
+        //return null;
+
 
     /**
      * Selection sort.
